@@ -17,18 +17,12 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-
-$router->post('/api/login', 'AuthController@login');
-$router->post('/api/register', 'AuthController@register');
-
 $router->group(['prefix' => 'api'], function () use ($router) {
 
+    $router->post('/login', 'AuthController@login');
+    $router->post('/register', 'AuthController@register');
+
     $router->group(['middleware' => 'auth'], function () use ($router) {
-
-        $router->get('/', function () use ($router) {
-            return $router->app->version();
-        });
-
         $router->post('/order', 'OrderController@store');
     });
 
