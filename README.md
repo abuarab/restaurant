@@ -34,6 +34,7 @@ Thank you for considering contributing to Lumen! The contribution guide can be f
 + Set `PASSPORT_LOGIN_ENDPOINT` , `PASSPORT_CLIENT_ID`, `PASSPORT_CLIENT_SECRET` and `PASSPORT_GRANT_TYPE `  in your `.env` file
 + `php artisan db:seed`
 + For testing order `vendor/phpunit/phpunit/phpunit`
++ Add SMTP values in `.env` to receive emails
 
 ### Logins
 After migration you can login with client user:
